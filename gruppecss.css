@@ -84,3 +84,9 @@ body {
 	height: 200px;
 	background-color: #444444;
 }
+nav ul li ul {
+display:none;
+}
+nav ul li:hover ul {
+display:block;
+}
