@@ -2,132 +2,116 @@
 
 <html>
 	<head>
-		<title>TITTEL - Herre
+		<title> Herre side
 		</title>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" type="text/css" href="../gruppecss.css" />
-		<script>
+        <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="salgcss.css" />
+        <script>
+		var images = [], x = -1;
+            images[0] = ["./bilder/folkpose.jpg", "http://1337.no"];
+            images[1] = ["./bilder/mannpose.jpg", "http://elite.no"];
+            images[2] = ["./bilder/salgpose.jpg", "http://tek.no/fil"];
+
+		window.onload = startTimer();
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x][0];
+			document.getElementById("imgHref").href = images[x][1];
+        }
+
+         
+
+        function startTimer() {
+            setInterval(displayNextImage, 5000);
+        }
 		</script>
-		<style>
-		</style>
-	</head>
-	<body>
-		<div id="content">
-			<header id="topbar">
-				<h1 id="logo">
-					<a href="../Layout.html" title="logo">LOGO - Herre</a>
-				</h1>
-				<div id="login"> login
-				</div>
-                <div id="herredame">
-					<div id="herre">
-						<a href="herreIndex.html"> Herre link
-						</a>
-					</div>
-					<div id="dame">
-						<a href="../dame/dameIndex.html"> Damelink
-						</a>
-					</div>
-				</div>
-				<div id="sokbox"> søkboks
-				</div>
-				</header>
-			<nav>
-				<div id="navbar"> navbar
-                    <ul>
-                        <li> 
-                            <a href="herreIndexJakke.html"> Jakker
-                            </a>
-                            <ul>
-                                <li> 
-                                    <a href="#"> Høstjakke
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Regnjakker
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Sommerjakker
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li> 
-                            <a href="#"> Bukser
-                            </a>
-                            <ul>
-                                <li> 
-                                    <a href="#"> Olabukser
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Chillebukser
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Fretexbukser
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li> 
-                            <a href="#"> Skjorter
-                            </a>
-                            <ul>
-                                <li> 
-                                    <a href="#"> T-skjorter
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Pen skjorter
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Fritidsskjorter
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"> Gensere
-                            </a>
-                            <ul>
-                                <li> 
-                                    <a href="#"> Strikkejakker
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Hettegensere
-                                    </a>
-                                </li>
-                                <li> 
-                                    <a href="#"> Fleecegensere
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-				</div>
-			</nav>
-			<main>
-				<div id="salgscontent">
-                    <div>
-                        <p></p>
-                    </div>
-                    <div>
-                        <p></p>
-                    </div>
-				</div>
-			</main>
-			<aside id="rightbar"> salgs filterering
-				<div id="filter"> 
-				</div>
-			</aside>
-			<footer id="kontakt"> footer info
-			</footer>
+    </head>
+<body>
+	<div class="nav">
+		<div class="container">
+		<ul class="pull-left">
+			<li><a href="../Forside/home.html"><img src="Logo.png"></a></li>
+			<li><a href="../Forside/home.html">home</a></li>
+            <li><a href="../dame/dameIndex.html">Dame-side</a><li>
+		</ul>
+		<ul class="pull-right">
+			<li><a href="#">Registrer</a></li>
+			<li><a href="#">log inn</a></li>
+		</ul>
 		</div>
-	</body>
-	
+	</div>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Herre klær.</h1>
+		</div>
+	</div> 
+	<div class="neighborhood-guides">
+		<div class="container">
+			<h2></h2>
+			<p></p>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+				        <img src="test1.jpg">
+					</div>
+                    <div class="thumbnail">
+                        <img src="test1.jpg">
+                        <p><br>100kr<p>
+					</div>
+                    <div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>   
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>
+                    <div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>
+                    <div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>
+				</div>
+                <div class="col-md-4">
+					<div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>
+                    <div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>
+                    <div class="thumbnail">
+                        <img src="test1.jpg">
+					</div>
+				</div>
+			</div>
+        </div>
+        <section class="reklame">
+       
+		<a href="http://pose.no" target="_blank" id="imgHref">
+            <center><img id="img" src="./bilder/damepose.jpg" width="700" height="300"/></center>
+		</a>
+	   </section>
+	</div>
+
+	<div class="learn-more">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Kontakt info</h3>
+					<p>
+                    joakim.s.granaas@hiof.no<br>
+                    Andreas.k.slette@hiof.no<br>
+                    sindre.fossheim@hiof.no<br>
+                    tormod.ronning@hiof.no<br>
+                    max.r.olij@hiof.no<br>
+                    </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
 </html>
 	
