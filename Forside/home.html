@@ -7,6 +7,25 @@
 		<link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
 		<link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="homecss.css">
+		<script>
+		var images = [], x = -1;
+        images[0] = ["./bilder/folkpose.jpg", "http://1337.no"];
+        images[1] = ["./bilder/mannpose.jpg", "http://elite.no"];
+        images[2] = ["./bilder/salgpose.jpg", "http://tek.no/fil"];
+ 
+		window.onload = startTimer();
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x][0];
+			document.getElementById("imgHref").href = images[x][1];
+        }
+
+         
+
+        function startTimer() {
+            setInterval(displayNextImage, 5000);
+        }
+		</script>
 	</head>
 	<body>
 		<div class="nav">
@@ -27,6 +46,12 @@
 				<p>reklame her i guess.</p>
 			</div>
 		</div> 
+		<section>
+       
+		<a href="http://pose.no" target="_blank" id="imgHref">
+			<img id="img" src="./bilder/damepose.jpg" width="700" height="300"/>
+		</a>
+	</section>
 		<div class="neighborhood-guides">
 			<div class="container">
 				<h2></h2>
